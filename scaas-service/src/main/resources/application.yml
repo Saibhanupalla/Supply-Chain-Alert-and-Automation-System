@@ -1,0 +1,48 @@
+spring:
+  # Database connection settings
+  datasource:
+    url: ${DB_URL} # Reads from the .env file
+    username: ${DB_USER} # Reads from the .env file
+    password: ${DB_PASS} # Reads from the .env file
+
+  # JPA and Hibernate settings
+  jpa:
+    hibernate:
+      # This validates that the DB schema matches the code entities
+      ddl-auto: validate
+    # A performance best practice
+    open-in-view: false
+
+  # Flyway database migration settings
+  flyway:
+    enabled: true
+
+  # Mail server settings (for sending email alerts)
+  mail:
+    host: ${MAIL_HOST} # Connects to MailHog
+    port: ${MAIL_PORT} # Connects to MailHog
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+
+  # Redis connection settings
+  data:
+    redis:
+      host: ${REDIS_HOST} # Connects to the Redis container
+      port: ${REDIS_PORT}
+
+# Logging level for our application's code
+logging:
+  level:
+    com:
+      company: INFO
+
+# Exposing health and metrics endpoints for monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics

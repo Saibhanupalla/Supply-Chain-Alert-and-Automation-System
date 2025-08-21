@@ -6,11 +6,11 @@ This service is the first component of a larger enterprise technology stack.
 
 ## Key Features
 
-  * [cite\_start]**Automated Shipment Monitoring**: Periodically polls simulated third-party logistics APIs to fetch the latest shipment statuses[cite: 105, 111].
-  * [cite\_start]**Intelligent Alerting**: Detects critical disruptions (e.g., "Delayed," "Held at Customs") and triggers real-time email notifications[cite: 117, 119].
-  * [cite\_start]**Automated Solution Workflow**: When a disruption is detected, the system automatically queries other logistics partners for alternative quotes, ranks them, and saves the best options for review[cite: 124, 126].
-  * [cite\_start]**Idempotent Event Processing**: Uses Redis to ensure that the same shipment status update is never processed more than once, preventing duplicate alerts[cite: 112].
-  * [cite\_start]**REST API**: Provides endpoints for registering new shipments and retrieving generated solutions[cite: 128, 130].
+  * **Automated Shipment Monitoring**: Periodically polls simulated third-party logistics APIs to fetch the latest shipment statuses[cite: 105, 111].
+  * **Intelligent Alerting**: Detects critical disruptions (e.g., "Delayed," "Held at Customs") and triggers real-time email notifications[cite: 117, 119].
+  * **Automated Solution Workflow**: When a disruption is detected, the system automatically queries other logistics partners for alternative quotes, ranks them, and saves the best options for review[cite: 124, 126].
+  * **Idempotent Event Processing**: Uses Redis to ensure that the same shipment status update is never processed more than once, preventing duplicate alerts[cite: 112].
+  * **REST API**: Provides endpoints for registering new shipments and retrieving generated solutions[cite: 128, 130].
 
 -----
 
